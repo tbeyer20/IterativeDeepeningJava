@@ -1,0 +1,12 @@
+#1) My program used an array to store an adjacency matrix (n x n) with 1's representing a path and 0's representing no path.  It also used an array to 
+store boolean values to represent if the node has been visited already or not (true if visited).  My program finally used a stack as a structure to 
+store the nodes and help use the Depth First Search algorithm.  I would push the new unvisited node onto the stack.  If the node had children,
+I would continue to visit the children and push them onto the stack until the node did not have any children.  Then I would pop off the stack
+the node without children to visit the previous node.  If that node has unvisited children it would visit them, but if there were no more children,
+it would pop that node and repeat the process.
+
+#2)  For iterative deepening, we basically use the same concept as DFS except to put a cap on the depth  we iterate for each level.  For this concept, I made a while
+loop in my main, with basically the same DFS algorithm except for a int variable to keep track of the depth the program is iterating to.  If the program found
+a "1" in the adjacency matrix that has not been visited, with iterative deepening, it would check the depth level to make sure it could process to the next depth 
+to pursue this new node that has not been visited.  If it reached its depth limit, it would pop a node off the stack and the parent node would proceed like a
+ normal DFS algorithm and move on to the next child if there was an unvisited child.
